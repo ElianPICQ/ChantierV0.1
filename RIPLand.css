@@ -1,0 +1,769 @@
+@charset "UTF-8";
+/* Feuille de style CSS de RIPLand version Web */
+@font-face {
+  font-family: "NeonLights";
+  src: url(fonts/NeonLights-22d.ttf);
+}
+/* Variables */
+/* Couleurs */
+:root {
+  --clr-neon: hsl(317 100% 5%);
+  /* Magenta & dérivés */
+  --clr-neon-low: hsl(317 100% 10%);
+  --clr-neon-bright: hsl(317 100% 54%);
+  --clr-neon-bright-tube: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  overflow-x: hidden;
+  background-color: #1A1A1D;
+  padding: 30px 45px 45px 30px;
+  position: relative;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* background du contenu */
+#page-container {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  color: #950740;
+  padding: 1em;
+  position: relative;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  /* Néon de Bienvenue */
+}
+header #bienvenue {
+  border: 0.75em double;
+  border-radius: 25px;
+  padding: 0 1em;
+  margin: 1em 0 0 1em;
+  height: min-content;
+  cursor: pointer;
+  font-family: "NeonLights";
+  z-index: 2;
+}
+
+/********************/
+/** LE GRAND NEON  **/
+/********************/
+.neon-bienvenue-on {
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  animation-duration: 8s;
+  animation-timing-function: cubic-bezier(0, 0.35, 0.75, 0);
+  animation-name: bienvenueOn;
+}
+
+.neon-bienvenue-off {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: bienvenueOff;
+}
+
+@keyframes bienvenueOn {
+  0% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  19% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 0.6;
+  }
+  20%, 24% {
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  25% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 1;
+  }
+  26%, 27% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  28% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 0.6;
+  }
+  29%, 38% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  39% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 0.7;
+  }
+  40%, 41% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  42% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 0.5;
+  }
+  43%, 44% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  45% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 0.8;
+  }
+  46% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  100% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 0.6;
+  }
+}
+/* texte clignotant quand néon éteint */
+@keyframes bienvenueOff {
+  0%, 14% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  15% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  16%, 23% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  24% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  25%, 27% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  28% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  29%, 47% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  48% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  49%, 51% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  52% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  53%, 55% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  56% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  57%, 59% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  60%, 74% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  75%, 79% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  80%, 81% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  82%, 87% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  88% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  89%, 99% {
+    /*allumé*/
+    color: var(--clr-neon-bright-tube);
+    text-shadow: 0 0 0.7em var(--clr-neon-bright-tube);
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.6;
+  }
+  100% {
+    /*eteint*/
+    color: var(--clr-neon);
+    text-shadow: 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+}
+/* Néon (Contour) */
+#page-neon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1em double var(--clr-neon);
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.neon-on {
+  animation-fill-mode: forwards;
+  animation-duration: 12s;
+  animation-timing-function: cubic-bezier(0, 0.35, 0.75, 0);
+  animation-name: neonOn;
+}
+
+.neon-off {
+  border-color: var(--clr-neon);
+  opacity: 0.4;
+}
+
+@keyframes neonOn {
+  0%, 60% {
+    /*eteint*/
+    border-color: var(--clr-neon);
+    box-shadow: inset 0 0 0 0 var(--clr-neon), 0 0 0 0 var(--clr-neon);
+    opacity: 0.4;
+  }
+  100% {
+    border-color: var(--clr-neon-bright-tube);
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon-bright), 0 0 1em 0.1em var(--clr-neon-bright);
+    opacity: 0.6;
+  }
+}
+/************************/
+/** FILTRE LUMINOSITE  **/
+/************************/
+.page-luminosity {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.page-luminosity-bright {
+  animation-fill-mode: forwards;
+  animation-delay: 7.2s;
+  animation-duration: 4.8s;
+  animation-timing-function: cubic-bezier(0, 0.35, 0.75, 0);
+  animation-name: luminosity-brighter;
+}
+
+@keyframes luminosity-brighter {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.2;
+    z-index: -1;
+  }
+}
+/*********************/
+/** SECTION SKILLS  **/
+/*********************/
+#skills {
+  margin: 30px 10% 50px auto;
+  width: 175px;
+  border: solid 1px blue;
+}
+#skills h3 {
+  animation-name: skillz_anim_title;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+#skills ul {
+  margin: 0;
+  list-style: none;
+}
+#skills ul li {
+  margin-bottom: 15px;
+  animation-name: skillz_anim;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  opacity: 0;
+  transform: translateX(200px);
+  animation-fill-mode: forwards;
+}
+
+/* KEYFRAMES pour Skillz */
+@keyframes skillz_anim_title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes skillz_anim {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#skills ul li:nth-child(1) {
+  animation-delay: 500ms;
+}
+#skills ul li:nth-child(2) {
+  animation-delay: 900ms;
+}
+#skills ul li:nth-child(3) {
+  animation-delay: 1300ms;
+}
+#skills ul li:nth-child(4) {
+  animation-delay: 1700ms;
+}
+#skills ul li:nth-child(5) {
+  animation-delay: 2100ms;
+}
+#skills ul li:nth-child(6) {
+  animation-delay: 2500ms;
+}
+
+/************************/
+/** SECTION MINI-JEUX  **/
+/************************/
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/***************************************/
+/** Shifumi (Pierre-feuille-ciseaux)  **/
+/***************************************/
+#shifumi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 565px;
+  height: 375px;
+  margin-left: 50px;
+  border: solid 1px white;
+  /* Bouton de défilement */
+  /* défilement de la boite */
+}
+#shifumi #shifumi-box {
+  width: 500px;
+  height: 375px;
+  padding: 10px;
+  margin: 0;
+  border: solid 2px green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#shifumi #shifumi-box #shifumi-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+#shifumi #shifumi-box #shifumi-choice {
+  border: 1px solid red;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#shifumi #shifumi-box #shifumi-choice label {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  /* affichage de la pierre cliquable */
+  /* affichage de la feuille cliquable */
+  /* affichage des ciseaux cliquable */
+}
+#shifumi #shifumi-box #shifumi-choice label #shifumi-pierre-display {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: brown;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+#shifumi #shifumi-box #shifumi-choice label #pierre__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#shifumi #shifumi-box #shifumi-choice label #pierre__input:checked + #shifumi-pierre-display {
+  background-color: black;
+}
+#shifumi #shifumi-box #shifumi-choice label #shifumi-feuille-display {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: brown;
+  transition: 0.4s;
+}
+#shifumi #shifumi-box #shifumi-choice label #feuille__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#shifumi #shifumi-box #shifumi-choice label #feuille__input:checked + #shifumi-feuille-display {
+  background-color: black;
+}
+#shifumi #shifumi-box #shifumi-choice label #shifumi-ciseaux-display {
+  position: absolute;
+  top: 0;
+  right: 40%;
+  bottom: 0;
+  left: 40%;
+  rotate: 45deg;
+  cursor: pointer;
+  background-color: brown;
+  transition: 0.4s;
+}
+#shifumi #shifumi-box #shifumi-choice label #shifumi-ciseaux-display::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  rotate: 90deg;
+  background-color: brown;
+  transition: 0.4s;
+}
+#shifumi #shifumi-box #shifumi-choice label #ciseaux__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#shifumi #shifumi-box #shifumi-choice label #ciseaux__input:checked + #shifumi-ciseaux-display {
+  background-color: black;
+}
+#shifumi #shifumi-box #shifumi-choice label #ciseaux__input:checked + #shifumi-ciseaux-display::before {
+  background-color: black;
+}
+#shifumi #shifumi-box #shifumi-fight {
+  width: 80%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid 1px black;
+}
+#shifumi #shifumi-box #shifumi-fight div {
+  width: 75px;
+  height: 75px;
+  border-left: solid 1px grey;
+  border-right: solid 1px grey;
+}
+#shifumi #shifumi-box #score {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid 1px red;
+}
+#shifumi #shifumi-box #score div {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid 1px red;
+}
+#shifumi #shifumi-box #score div span {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  border: solid 1px yellow;
+}
+#shifumi #shifumi-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border: solid 2px black;
+}
+#shifumi #shifumi-toggle__button {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  cursor: pointer;
+  border-top: solid 5px white;
+  border-right: solid 5px white;
+  border-radius: 10%;
+  rotate: 45deg;
+  transition: rotate 0.5s ease-in-out 0.75s;
+}
+#shifumi #shifumi-toggle__input {
+  opacity: 0;
+  widtth: 0;
+  height: 0;
+}
+#shifumi #shifumi-toggle__input:checked + #shifumi-toggle__button {
+  rotate: 225deg;
+}
+
+.slide-in-left {
+  transition: 0.75s;
+  transform: translateX(-550px);
+}
+
+.slide-out-left {
+  transition: 0.75s;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  transition: 0.75s;
+  transform: translateX(550px);
+}
+
+.slide-out-right {
+  transition: 0.75s;
+  transform: translateX(0);
+}
+
+/***********************/
+/*** INFINITE SWORD  ***/
+/***********************/
+#sword-container {
+  width: 565px;
+  height: 375px;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 247px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border: solid 10px black;
+  border-radius: 10%;
+}
+#sword-container #sword {
+  overflow-y: scroll;
+  width: min-content;
+  height: 100%;
+  padding-right: 15px;
+  margin: auto;
+}
+#sword-container #sword pre {
+  width: min-content;
+  margin: 0 auto 0 auto;
+}
+#sword-container #sword .hide {
+  display: none;
+}
+#sword-container #sword-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border: solid 2px black;
+}
+#sword-container #sword-toggle__button {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  cursor: pointer;
+  border-bottom: solid 5px white;
+  border-left: solid 5px white;
+  border-radius: 10%;
+  rotate: 45deg;
+  transition: rotate 0.5s ease-in-out 0.75s;
+}
+#sword-container #sword-toggle__input {
+  opacity: 0;
+  widtth: 0;
+  height: 0;
+}
+#sword-container #sword-toggle__input:checked + #sword-toggle__button {
+  rotate: 225deg;
+}
+
+/***********************/
+/*** SECTION SKILLZ  ***/
+/***********************/
+#skillz {
+  width: 565px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+#skillz .skill {
+  margin: 10px;
+}
+
+.show-skillz {
+  transition: 0.5s;
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.hide-skillz {
+  transition: 0.5s;
+  transform: translateX(-550px);
+  opacity: 0;
+}
+
+/***************/
+/*** FOOTER  ***/
+/***************/
+footer {
+  padding-bottom: 50px;
+}
+
+/*# sourceMappingURL=RIPLand.css.map */
